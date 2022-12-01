@@ -1,0 +1,122 @@
+#fullpage.no-scroll {
+  max-height: 100vh;
+  overflow-x: hidden;
+}
+
+#fullpage {
+  overflow-x: hidden;
+}
+
+.section.one {
+  background-image: url(../images/1.avif);
+}
+
+.section.two {
+  background-image: url(../images/2.avif);
+}
+
+.section.three {
+  background-image: url(../images/3.avif);
+}
+
+.section.four {
+  background-image: url(../images/4.avif);
+}
+
+.section.five {
+  background-image: url(../images/5.avif);
+}
+
+.section.six {
+  background-image: url(../images/6.avif);
+}
+
+.section.seven {
+  background-image: url(../images/7.avif);
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  //   max-height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    // margin-top: 0;
+
+    &__tittle {
+      // font-weight: bold;
+      // font-family: "GothamBook";
+      font-size: 2.5rem;
+      margin-bottom: 0.3125rem;
+      margin-top: 1.675rem;
+    }
+
+    &__description {
+      margin: 0;
+      font-size: 0.9375rem;
+      font-weight: 500;
+
+      &__link {
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+
+    text-align: center;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    // width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
+
+    @include breakpoint-down(small) {
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__btn {
+      padding: 0.9375rem;
+      max-width: 18.75rem;
+      border: 0;
+      //   box-sizing: border-box;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      border-radius: 1.25rem;
+      flex-basis: 60%;
+      margin-bottom: 0.625rem;
+      text-transform: capitalize;
+
+      @include breakpoint-down(small) {
+        flex-basis: 80%;
+        flex-direction: column;
+        padding: 0.625rem;
+      }
+
+      &__primary {
+        background: rgba(23, 26, 42, 0.8);
+        color: #fff;
+      }
+
+      &__secondary {
+        background: rgba(255, 255, 255, 0.65);
+        color: $primary-color;
+      }
+    }
+  }
+}
